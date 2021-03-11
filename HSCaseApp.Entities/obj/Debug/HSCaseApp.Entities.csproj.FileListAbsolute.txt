@@ -1,0 +1,12 @@
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\HSCaseApp.Entities.dll
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\HSCaseApp.Entities.pdb
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\obj\Debug\HSCaseApp.Entities.csprojAssemblyReference.cache
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\obj\Debug\HSCaseApp.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\obj\Debug\HSCaseApp.Entities.dll
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\obj\Debug\HSCaseApp.Entities.pdb
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\HSCaseApp.Entities.dll.config
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\EntityFramework.dll
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\EntityFramework.xml
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ONUR\source\repos\HSCaseApp\HSCaseApp.Entities\obj\Debug\HSCaseApp.Entities.csproj.CopyComplete

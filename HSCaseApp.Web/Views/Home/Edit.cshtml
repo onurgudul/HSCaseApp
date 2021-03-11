@@ -1,0 +1,79 @@
+﻿@model IEnumerable<HSCaseApp.Entities.DatabaseTable.CostOfFuture>
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Hesaplama Detayları</h2>
+
+
+<table class="table">
+    @*<tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CardName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Methodology)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyPrice)
+            </th>
+            <th></th>
+        </tr>*@
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <label>Poliçe Tutarı: </label>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyPrice)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Taksit Sayısı: </label>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Installment)
+            </td>
+        </tr>
+
+    }
+
+</table>
+<table class="table table-bordered">
+    <tr>
+        <th></th>
+        <th>Aylık Gün Sayısı</th>
+        <th>Günlük Hesaplama</th>
+        <th>Aylık Hesaplama</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        for (int i = 0; i < item.Installment; i++)
+        {
+            <tr>
+                <td>@item.PolicyStartDate.AddMonths(i)</td>
+                <td>@DateTime.DaysInMonth(item.PolicyStartDate.Year, item.PolicyStartDate.AddMonths(i).Month)</td>
+                <td>@Convert.ToInt32(@item.PolicyPrice/365*(@DateTime.DaysInMonth(item.PolicyStartDate.Year,item.PolicyStartDate.AddMonths(i).Month)))</td>
+                <td>@Convert.ToDecimal(@item.PolicyPrice/@item.Installment)</td>
+            </tr>
+        }
+    }
+
+
+</table>

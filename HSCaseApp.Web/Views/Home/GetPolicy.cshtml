@@ -1,0 +1,68 @@
+﻿@model IEnumerable<HSCaseApp.Entities.DatabaseTable.CostOfFuture>
+
+@{
+    ViewBag.Title = "GetPolicy";
+}
+
+<h2>Poliçeler</h2>
+
+<p>
+    @Html.ActionLink("Yeni Poliçe Oluştur", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolicyStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolicyEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolicyDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Methodology)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolicyPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Methodology)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Detayları Görüntüle","Edit", new {  id=item.DocNum  }) 
+         
+        </td>
+    </tr>
+}
+
+</table>
